@@ -71,113 +71,57 @@ class UserSerializer(serializers.ModelSerializer):
         ]
 
 
-# =========================================================
-# REGISTER SERIALIZER
-# =========================================================
-
-
 
 User = get_user_model()
 
 
 class RegisterSerializer(serializers.Serializer):
-
-    username = serializers.CharField(
-        max_length=150
-    )
-
+    username = serializers.CharField(max_length=150)
     email = serializers.EmailField()
+    password = serializers.CharField(write_only=True, min_length=6)
+    first_name = serializers.CharField(max_length=150)
+    last_name = serializers.CharField(max_length=150)
+    phone = serializers.CharField(max_length=15)
 
-    password = serializers.CharField(
-        write_only=True,
-        min_length=6
+    role = serializers.ChoiceField(
+        choices=User.Role.choices
     )
-
-    first_name = serializers.CharField(
-        max_length=150
-    )
-
-    last_name = serializers.CharField(
-        max_length=150
-    )
-
-    phone = serializers.CharField(
-        max_length=15
-    )
-
 
     def validate(self, data):
-
         username = data.get("username")
         email = data.get("email")
         phone = data.get("phone")
 
-        # Username check
-        if User.objects.filter(
-            username=username
-        ).exists():
-
+        if User.objects.filter(username=username).exists():
             raise serializers.ValidationError({
                 "username": "Username already exists."
             })
 
-
-        # Email check
-        if User.objects.filter(
-            email=email
-        ).exists():
-
+        if User.objects.filter(email=email).exists():
             raise serializers.ValidationError({
                 "email": "Email already exists."
             })
 
-
-        # Phone check
-        if User.objects.filter(
-            phone=phone
-        ).exists():
-
+        if User.objects.filter(phone=phone).exists():
             raise serializers.ValidationError({
                 "phone": "Phone number already exists."
             })
 
-
         return data
 
-
     def create_user(self):
-
-        username = self.validated_data["username"]
-        email = self.validated_data["email"]
-        password = self.validated_data["password"]
-        first_name = self.validated_data["first_name"]
-        last_name = self.validated_data["last_name"]
-        phone = self.validated_data["phone"]
-
-
-        # Create user manually
         user = User(
-            username=username,
-            email=email,
-            first_name=first_name,
-            last_name=last_name,
-            phone=phone,
-
-            # New users are customers
-            role=User.Role.CUSTOMER,
-
-            # Phone is not verified initially
+            username=self.validated_data["username"],
+            email=self.validated_data["email"],
+            first_name=self.validated_data["first_name"],
+            last_name=self.validated_data["last_name"],
+            phone=self.validated_data["phone"],
+            role=self.validated_data["role"],
             is_phone_verified=False,
-
-            # Activate account
             is_active=True,
         )
 
-
-        # Hash password manually
-        user.set_password(password)
-
-        # Save user
+        user.set_password(self.validated_data["password"])
         user.save()
 
         return user
