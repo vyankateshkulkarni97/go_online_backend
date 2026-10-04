@@ -1,4 +1,4 @@
-from rest_framework.routers import DefaultRouter
+from django.urls import path
 
 from .views import (
     UserViewSet,
@@ -25,133 +25,172 @@ from .views import (
 )
 
 
-router = DefaultRouter()
+urlpatterns = [
 
-router.register(
-    r"users",
-    UserViewSet,
-    basename="users"
-)
+    path(
+        "users/",
+        UserViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"register",
-    RegisterViewSet,
-    basename="register"
-)
+    path(
+        "register/",
+        RegisterViewSet.as_view({
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"profiles",
-    UserProfileViewSet,
-    basename="profiles"
-)
+    path(
+        "profiles/",
+        UserProfileViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"locations",
-    LocationViewSet,
-    basename="locations"
-)
+    path(
+        "locations/",
+        LocationViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"categories",
-    CategoryViewSet,
-    basename="categories"
-)
+    path(
+        "categories/",
+        CategoryViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"subcategories",
-    SubCategoryViewSet,
-    basename="subcategories"
-)
+    path(
+        "subcategories/",
+        SubCategoryViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"brands",
-    BrandViewSet,
-    basename="brands"
-)
+    path(
+        "brands/",
+        BrandViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"products",
-    ProductViewSet,
-    basename="products"
-)
+    path(
+        "products/",
+        ProductViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"product-images",
-    ProductImageViewSet,
-    basename="product-images"
-)
+    path(
+        "product-images/",
+        ProductImageViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"product-variants",
-    ProductVariantViewSet,
-    basename="product-variants"
-)
+    path(
+        "product-variants/",
+        ProductVariantViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"stores",
-    StoreViewSet,
-    basename="stores"
-)
+    path(
+        "stores/",
+        StoreViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"inventory",
-    StoreInventoryViewSet,
-    basename="inventory"
-)
+    path(
+        "inventory/",
+        StoreInventoryViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"cart",
-    CartViewSet,
-    basename="cart"
-)
+    path(
+        "cart/",
+        CartViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"cart-items",
-    CartItemViewSet,
-    basename="cart-items"
-)
+    path(
+        "cart-items/",
+        CartItemViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"orders",
-    OrderViewSet,
-    basename="orders"
-)
+    path(
+        "orders/",
+        OrderViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"order-items",
-    OrderItemViewSet,
-    basename="order-items"
-)
+    path(
+        "order-items/",
+        OrderItemViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"payments",
-    PaymentViewSet,
-    basename="payments"
-)
+    path(
+        "payments/",
+        PaymentViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"delivery-partners",
-    DeliveryPartnerViewSet,
-    basename="delivery-partners"
-)
+    path(
+        "delivery-partners/",
+        DeliveryPartnerViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"deliveries",
-    DeliveryViewSet,
-    basename="deliveries"
-)
+    path(
+        "deliveries/",
+        DeliveryViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"reviews",
-    ProductReviewViewSet,
-    basename="reviews"
-)
+    path(
+        "reviews/",
+        ProductReviewViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
 
-router.register(
-    r"coupons",
-    CouponViewSet,
-    basename="coupons"
-)
-
-
-urlpatterns = router.urls
+    path(
+        "coupons/",
+        CouponViewSet.as_view({
+            "get": "list",
+            "post": "create",
+        }),
+    ),
+]

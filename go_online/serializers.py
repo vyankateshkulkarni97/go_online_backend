@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
+# from django.contrib.auth import get_user_model
+
+from .models import User
 
 from .models import (
     User,
@@ -24,17 +26,29 @@ from .models import (
     Coupon,
 )
 
-User = get_user_model()
+# User = get_user_model()
 
 
 # ============================================================
 # USER
 # ============================================================
 
+from django.contrib.auth import get_user_model
+from rest_framework import serializers
+
+
+User = get_user_model()
+
+
+# =========================================================
+# USER SERIALIZER
+# =========================================================
+
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
+
         fields = [
             "id",
             "username",
@@ -45,42 +59,131 @@ class UserSerializer(serializers.ModelSerializer):
             "role",
             "is_phone_verified",
             "created_at",
+            "updated_at",
         ]
+
         read_only_fields = [
             "id",
+            "role",
+            "is_phone_verified",
             "created_at",
+            "updated_at",
         ]
 
 
-class RegisterSerializer(serializers.ModelSerializer):
+# =========================================================
+# REGISTER SERIALIZER
+# =========================================================
+
+
+
+User = get_user_model()
+
+
+class RegisterSerializer(serializers.Serializer):
+
+    username = serializers.CharField(
+        max_length=150
+    )
+
+    email = serializers.EmailField()
 
     password = serializers.CharField(
         write_only=True,
         min_length=6
     )
 
-    class Meta:
-        model = User
-        fields = [
-            "username",
-            "email",
-            "phone",
-            "password",
-            "first_name",
-            "last_name",
-        ]
+    first_name = serializers.CharField(
+        max_length=150
+    )
 
-    def create(self, validated_data):
+    last_name = serializers.CharField(
+        max_length=150
+    )
 
-        user = User.objects.create_user(
-            **validated_data
+    phone = serializers.CharField(
+        max_length=15
+    )
+
+
+    def validate(self, data):
+
+        username = data.get("username")
+        email = data.get("email")
+        phone = data.get("phone")
+
+        # Username check
+        if User.objects.filter(
+            username=username
+        ).exists():
+
+            raise serializers.ValidationError({
+                "username": "Username already exists."
+            })
+
+
+        # Email check
+        if User.objects.filter(
+            email=email
+        ).exists():
+
+            raise serializers.ValidationError({
+                "email": "Email already exists."
+            })
+
+
+        # Phone check
+        if User.objects.filter(
+            phone=phone
+        ).exists():
+
+            raise serializers.ValidationError({
+                "phone": "Phone number already exists."
+            })
+
+
+        return data
+
+
+    def create_user(self):
+
+        username = self.validated_data["username"]
+        email = self.validated_data["email"]
+        password = self.validated_data["password"]
+        first_name = self.validated_data["first_name"]
+        last_name = self.validated_data["last_name"]
+        phone = self.validated_data["phone"]
+
+
+        # Create user manually
+        user = User(
+            username=username,
+            email=email,
+            first_name=first_name,
+            last_name=last_name,
+            phone=phone,
+
+            # New users are customers
+            role=User.Role.CUSTOMER,
+
+            # Phone is not verified initially
+            is_phone_verified=False,
+
+            # Activate account
+            is_active=True,
         )
 
-        Cart.objects.create(user=user)
+
+        # Hash password manually
+        user.set_password(password)
+
+        # Save user
+        user.save()
 
         return user
 
 
+        
 # ============================================================
 # PROFILE
 # ============================================================

@@ -1,7 +1,8 @@
-from rest_framework import viewsets
+from rest_framework import viewsets , status
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from django.contrib.auth import get_user_model
+from rest_framework.response import Response
 
 from .models import (
     UserProfile,
@@ -76,22 +77,81 @@ class UserViewSet(viewsets.ModelViewSet):
 class RegisterViewSet(viewsets.GenericViewSet):
 
     serializer_class = RegisterSerializer
-    permission_classes = [AllowAny]
+
+    permission_classes = [
+        AllowAny
+    ]
+
 
     def create(self, request):
+
+        # -----------------------------------------
+        # Validate request
+        # -----------------------------------------
 
         serializer = self.get_serializer(
             data=request.data
         )
 
-        serializer.is_valid(raise_exception=True)
 
-        user = serializer.save()
+        if not serializer.is_valid():
 
-        return Response(
-            UserSerializer(user).data,
-            status=201
-        )
+            return Response(
+                {
+                    "success": False,
+                    "message": "Registration failed.",
+                    "errors": serializer.errors,
+                },
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+
+        try:
+
+            # -----------------------------------------
+            # Custom user creation
+            # -----------------------------------------
+
+            user = serializer.create_user()
+
+
+            # -----------------------------------------
+            # Response data
+            # -----------------------------------------
+
+            user_data = UserSerializer(
+                user
+            ).data
+
+
+            return Response(
+                {
+                    "success": True,
+                    "message": "Registration successful.",
+                    "data": user_data,
+                },
+                status=status.HTTP_201_CREATED
+            )
+
+
+        except Exception as error:
+
+            print(
+                "Registration Error:",
+                str(error)
+            )
+
+
+            return Response(
+                {
+                    "success": False,
+                    "message": "Unable to create account.",
+                    "error": str(error),
+                },
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+
 
 
 # ============================================================
@@ -147,7 +207,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 # ============================================================
@@ -159,7 +219,7 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
     queryset = SubCategory.objects.all()
     serializer_class = SubCategorySerializer
 
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 # ============================================================

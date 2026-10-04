@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l^_u(k0(g3erovu29e400i*c9s=bp@!mj(i$a!4&x0ks-!bd4m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -71,6 +71,8 @@ REST_FRAMEWORK = {
 ROOT_URLCONF = 'goonline.urls'
 
 CORS_ALLOW_ALL_ORIGINS = True
+AUTH_USER_MODEL = "go_online.User"
+
 
 TEMPLATES = [
     {
@@ -119,6 +121,23 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/

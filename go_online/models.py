@@ -10,8 +10,14 @@ class User(AbstractUser):
         STORE_MANAGER = "STORE_MANAGER", "Store Manager"
         DELIVERY_PARTNER = "DELIVERY_PARTNER", "Delivery Partner"
 
-    email = models.EmailField(unique=True)
-    phone = models.CharField(max_length=15, unique=True)
+    email = models.EmailField(
+        unique=True
+    )
+
+    phone = models.CharField(
+        max_length=15,
+        unique=True
+    )
 
     role = models.CharField(
         max_length=30,
@@ -19,13 +25,24 @@ class User(AbstractUser):
         default=Role.CUSTOMER
     )
 
-    is_phone_verified = models.BooleanField(default=False)
+    is_phone_verified = models.BooleanField(
+        default=False
+    )
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
+
+    updated_at = models.DateTimeField(
+        auto_now=True
+    )
 
     def __str__(self):
         return self.username
+
+
+
+
 
 
 class UserProfile(models.Model):
