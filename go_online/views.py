@@ -238,42 +238,60 @@ class BrandViewSet(viewsets.ModelViewSet):
 # PRODUCT
 # ============================================================
 
-class ProductViewSet(viewsets.ModelViewSet):
 
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.exceptions import ValidationError
+
+from .models import Product, Category
+from .serializers import ProductSerializer
+
+
+
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+from .models import Product
+
+
+class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
+        queryset = Product.objects.select_related(
+            "category", "subcategory", "brand"
+        ).prefetch_related("images", "variants")
 
-        queryset = Product.objects.all()
-
-        category = self.request.query_params.get(
-            "category"
-        )
-
-        brand = self.request.query_params.get(
-            "brand"
-        )
-
-        search = self.request.query_params.get(
-            "search"
-        )
+        category = self.request.query_params.get("category")
+        brand = self.request.query_params.get("brand")
+        search = self.request.query_params.get("search")
 
         if category:
-            queryset = queryset.filter(
-                category_id=category
-            )
+            category = category.strip()
+
+            if category.isdigit():
+                queryset = queryset.filter(
+                    category_id=int(category)
+                )
+            else:
+                queryset = queryset.filter(
+                    category__slug__iexact=category
+                )
 
         if brand:
-            queryset = queryset.filter(
-                brand_id=brand
-            )
+            brand = brand.strip()
+
+            if brand.isdigit():
+                queryset = queryset.filter(brand_id=int(brand))
+            else:
+                queryset = queryset.filter(
+                    brand__slug__iexact=brand
+                )
 
         if search:
             queryset = queryset.filter(
-                name__icontains=search
+                name__icontains=search.strip()
             )
 
         return queryset

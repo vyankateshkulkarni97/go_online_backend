@@ -3,6 +3,10 @@
 import os
 import sys
 
+os.environ.setdefault(
+    "DJANGO_SETTINGS_MODULE",
+    "goonline.settings"
+)
 
 def main():
     """Run administrative tasks."""

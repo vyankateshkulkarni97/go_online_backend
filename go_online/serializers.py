@@ -186,10 +186,28 @@ class BrandSerializer(serializers.ModelSerializer):
 # ============================================================
 
 class ProductImageSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
 
     class Meta:
         model = ProductImage
-        fields = "__all__"
+        fields = [
+            "id",
+            "image",
+            "is_primary",
+            "display_order",
+        ]
+
+    def get_image(self, obj):
+        if not obj.image:
+            return None
+
+        request = self.context.get("request")
+        url = obj.image.url
+
+        if request:
+            return request.build_absolute_uri(url)
+
+        return url
 
 
 class ProductVariantSerializer(serializers.ModelSerializer):

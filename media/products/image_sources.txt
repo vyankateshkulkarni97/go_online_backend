@@ -1,0 +1,204 @@
+Product: Car Phone Holder | SKU: AUTO001
+Image: /media/products/AUTO001.jpg
+Source: https://upload.wikimedia.org/wikipedia/commons/d/d8/Car_phone_Type100_at_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+Artist: <a href="//commons.wikimedia.org/wiki/User:Yoh-Plus" title="User:Yoh-Plus">Yoh-Plus</a>
+License: CC BY 4.0 | https://creativecommons.org/licenses/by/4.0
+------------------------------------------------------------
+SKU: FASH001
+Product: Men's Casual T-Shirt
+Title: Classic cut with a pocket and everyday comfort ...
+Creator: screen printing - workshop
+License: pdm 1.0
+License URL: https://creativecommons.org/publicdomain/mark/1.0/
+Image source: https://www.flickr.com/photos/142296191@N06/39983059011
+Image URL: https://live.staticflickr.com/4652/39983059011_3d6fcd2d1c_b.jpg
+------------------------------------------------------------
+SKU: FASH002
+Product: Women's Handbag
+Title: Shop-aholic
+Creator: Wendy Longo photography
+License: by-nd 2.0
+License URL: https://creativecommons.org/licenses/by-nd/2.0/
+Image source: https://www.flickr.com/photos/7228825@N05/467584441
+Image URL: https://live.staticflickr.com/173/467584441_3e82fbd4d5_b.jpg
+------------------------------------------------------------
+SKU: FASH003
+Product: Running Shoes
+Title: Running Shoes
+Creator: Josiah Mackenzie
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/36531501@N00/3414064391
+Image URL: https://live.staticflickr.com/3391/3414064391_b18b99d7b5_b.jpg
+------------------------------------------------------------
+SKU: FASH004
+Product: Denim Jeans
+Title: Woman in blue denim jeans posing at home. A watch and a bracelet on her wrist
+Creator: Ivan Radic
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/26344495@N05/49106600577
+Image URL: https://live.staticflickr.com/65535/49106600577_c2c99260d8_b.jpg
+------------------------------------------------------------
+SKU: MOB001
+Product: Smartphone 128GB
+Title: Garmin-Asus A10 GPS Android smartphone review
+Creator: liewcf
+License: by-sa 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+Image source: https://www.flickr.com/photos/34353636@N00/5368269021
+Image URL: https://live.staticflickr.com/5283/5368269021_5f5308487e_b.jpg
+------------------------------------------------------------
+SKU: MOB002
+Product: Mobile Cover
+Title: Moto G6 Case, DONWELL 360 Degree Rotating Ring Holder Kickstand Scratch Resistant Drop Protective Case Cover for Motorola Moto G6Moto G (6th Generation) (Black)
+Creator: ekosunaryo
+License: by-sa 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+Image source: https://www.flickr.com/photos/149902810@N07/45261748905
+Image URL: https://live.staticflickr.com/4879/45261748905_a2983b4f84_m.jpg
+------------------------------------------------------------
+SKU: MOB003
+Product: Fast Charger
+Title: Taxi charger - P1060260
+Creator: Lars Plougmann
+License: by-sa 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+Image source: https://www.flickr.com/photos/75062596@N00/2246688417
+Image URL: https://live.staticflickr.com/2178/2246688417_e09c9be010_b.jpg
+------------------------------------------------------------
+SKU: ELEC002
+Product: Bluetooth Speaker
+Title: HP Portable Bluetooth Speaker
+Creator: AngryJulieMonday
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/33731571@N07/8272741081
+Image URL: https://live.staticflickr.com/8072/8272741081_cbe0b2ac0a_b.jpg
+------------------------------------------------------------
+SKU: BEAUTY001
+Product: Face Care Kit
+Title: Skincare bottles, Location unknown, Aug
+Creator: None
+License: cc0 1.0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Image source: https://www.rawpixel.com/image/6112549/skincare-bottles-location-unknown-aug-2015
+Image URL: https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZyaHlnaWVuZV9jbGVhbmxpbmVzc19za2luY2FyZV84NzA3NjMtaW1hZ2Uta3oyZTQ4amguanBn.jpg
+------------------------------------------------------------
+SKU: BEAUTY002
+Product: Face Wash
+Title: Vitamin C Facial Cleanser - Anti Aging, Breakout & Blemish, Wrinkle Reducing Gel Face Wash - Clear Pores on Oily, Dry & Sensitive Skin with Organic & Natural Ingredients - InstaNatural - 6.7 oz
+Creator: ekosunaryo
+License: by-sa 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+Image source: https://www.flickr.com/photos/149902810@N07/32377152517
+Image URL: https://live.staticflickr.com/7816/32377152517_4f8e272cdb.jpg
+------------------------------------------------------------
+SKU: HOME001
+Product: Decorative Table Lamp
+Title: Decorative table lamp illuminated. Lamp shade has an erratic wiggly line design, the maker’s seem fabric join is clearly visible. An edge binding tape hangs in need of repair.
+Creator: Rashed Hossain
+License: cc0 1.0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Image source: https://wordpress.org/photos/photo/4726968a6d/
+Image URL: https://pd.w.org/2026/01/4726968a6d8853261.98178854-1365x2048.jpg
+------------------------------------------------------------
+SKU: HOME002
+Product: Wall Clock
+Title: Early General Electric Colored Wall Clock
+Creator: alexkerhead
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/26354629@N02/2658021420
+Image URL: https://live.staticflickr.com/3177/2658021420_9d52508998_b.jpg
+------------------------------------------------------------
+SKU: APP001
+Product: Electric Kettle
+Title: Electric water kettle
+Creator: None
+License: cc0 1.0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Image source: https://www.rawpixel.com/image/6035963/photo-image-public-domain-kitchen-water
+Image URL: https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJrZXR0bGVfd2F0ZXJfa2F6YW5fZWxlY3Ryb25pYy1pbWFnZS1reWJkZHdpNy5qcGc.jpg
+------------------------------------------------------------
+SKU: APP002
+Product: Mixer Grinder
+Title: Kitchens & Invaders - Milano 2015
+Creator: corno.fulgur75
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/129231073@N06/22152244210
+Image URL: https://live.staticflickr.com/772/22152244210_da10984886_b.jpg
+------------------------------------------------------------
+SKU: TOY001
+Product: Building Blocks
+Title: Building with blocks IV
+Creator: tillwe
+License: by-sa 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+Image source: https://www.flickr.com/photos/98652633@N00/334443914
+Image URL: https://live.staticflickr.com/127/334443914_b5962f1537_b.jpg
+------------------------------------------------------------
+SKU: TOY002
+Product: Soft Teddy Bear
+Title: soft toy crocodile and teddy bear
+Creator: Steve A Johnson
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/14529257@N03/4622243520
+Image URL: https://live.staticflickr.com/3311/4622243520_f8042891ed.jpg
+------------------------------------------------------------
+SKU: FOOD001
+Product: Dry Fruits Pack
+Title: Dry Fruits Namkeen Recipe - A Fasting Recipe By Sonia Goyal
+Creator: Sonia Goyal Jaipur
+License: by-sa 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+Image source: https://www.flickr.com/photos/115727405@N06/28115954606
+Image URL: https://live.staticflickr.com/7423/28115954606_5a068f9d36_b.jpg
+------------------------------------------------------------
+SKU: AUTO001
+Product: Car Phone Holder
+Title: Charging phone
+Creator: markguim
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/26558498@N00/3240272128
+Image URL: https://live.staticflickr.com/3420/3240272128_4333b0882b_b.jpg
+------------------------------------------------------------
+SKU: AUTO002
+Product: Car Cleaning Kit
+Title: Very clean model Ford products... DSC_0215
+Creator: wbaiv
+License: by-sa 2.0
+License URL: https://creativecommons.org/licenses/by-sa/2.0/
+Image source: https://www.flickr.com/photos/9998127@N06/26221127631
+Image URL: https://live.staticflickr.com/1540/26221127631_5bb118d612_b.jpg
+------------------------------------------------------------
+SKU: SPORT001
+Product: Yoga Mat
+Title: Jan 12: The Yoga crew were here!
+Creator: debtony
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/72966361@N00/8373088886
+Image URL: https://live.staticflickr.com/8323/8373088886_2db169ea80_b.jpg
+------------------------------------------------------------
+SKU: SPORT002
+Product: Skipping Rope
+Title: Playtime, Cats in Human Situation, Playing Jump Rope with a Vintage Victorian Doll
+Creator: Beverly & Pack
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/10101046@N06/3451927303
+Image URL: https://live.staticflickr.com/3319/3451927303_a992b38ef8_b.jpg
+------------------------------------------------------------
+SKU: FURN002
+Product: Study Table
+Title: Small Home Working Table
+Creator: dejankrsmanovic
+License: by 2.0
+License URL: https://creativecommons.org/licenses/by/2.0/
+Image source: https://www.flickr.com/photos/155403590@N07/48210800471
+Image URL: https://live.staticflickr.com/65535/48210800471_d2b2b70267_b.jpg
+------------------------------------------------------------
